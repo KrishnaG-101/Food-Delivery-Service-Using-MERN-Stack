@@ -1,0 +1,114 @@
+/* Profile Page Container */
+.profile-page {
+    display: flex;
+    height: 100vh;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+/* Left Sidebar */
+.profile-page-left {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+/* Sidebar Options */
+.profile-page-left-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.profile-page-left-option img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Hover and Active Effects */
+.profile-page-left-option:hover,
+.profile-page-left-option.active {
+    background: #2E8B57;
+    color: white;
+    font-weight: 500;
+}
+
+/* Right Section */
+.profile-page-right {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title */
+.profile-page h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2E8B57;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Underline Effect */
+.profile-page h2::after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #2E8B57;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+.profile-page h2:hover::after {
+    width: 80px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .profile-page {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-page-left {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        position: static;
+        padding: 15px;
+    }
+
+    .profile-page-right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-page-left-option p {
+        display: none; /* Hide text and only show icons */
+    }
+}
