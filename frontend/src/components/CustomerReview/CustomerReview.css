@@ -1,0 +1,122 @@
+.customer-review {
+  width: 100%;
+  min-height: 60vh;
+  /* background: url('../../assets/header_img7.jpg') no-repeat center center/cover; */
+  /* background: #deeae4; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-top: 80px;
+  /* border-radius: 20px; */ 
+}
+
+/* Reviews Section */
+.customer-reviews {
+  width: 100%;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.customer-reviews h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); */
+  color: #333;
+}
+
+/* Review Cards Container */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+/* Review Card Styling */
+.review-card {
+  background: rgba(255, 255, 255, 0.15); /* Slight transparency */
+  padding: 20px;
+  /* border-radius: 10px; */
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px; 
+  width: 350px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  color: #555;
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.review-card:hover {
+  transform: scale(1.05);
+}
+
+/* Review Header */
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-header img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.stars {
+  color: gold;
+  font-size: 1.2rem;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 1024px) {
+  .review-card {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .customer-review {
+    min-height: 80vh;
+    padding: 10px;
+  }
+
+  .customer-reviews h2 {
+    font-size: 1.8rem;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .review-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .customer-review {
+    padding: 10px;
+    min-height: 90vh;
+  }
+
+  .customer-reviews h2 {
+    font-size: 1.5rem;
+  }
+
+  .review-card {
+    width: 95%;
+    padding: 15px;
+  }
+}
